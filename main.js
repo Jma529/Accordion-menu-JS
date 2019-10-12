@@ -1,4 +1,4 @@
-/* Version one -jQuery */
+/* jQuery toggle +/- icons */
 $(document).ready(function(){
   $('.topic').click(function(){
     $(this).toggleClass('active');
@@ -7,22 +7,21 @@ $(document).ready(function(){
 
    
 
-
+/* Jquery to toggle menus */
  $('.toggle').click(function(e) {
      e.preventDefault();
 
-   var $this = $(this);
+   var $active = $(active);
 
-    if ($this.next().hasClass('show')) {
-        $this.next().removeClass('show');
-        $this.next().slideUp(350);
+    if ($active.next().hasClass('show')) {
+        $active.next().removeClass('show');
+        $active.next().slideUp(350);
     } else {
-       $this.parent().parent().find('li .inner').removeClass('show');
-       $this.parent().parent().find('li .inner').slideUp(350);
-      
-   
-        $this.next().toggleClass('show');
-        $this.next().slideToggle(350);
+       $active.parent().active().find('li .inner').removeClass('show');
+       $active.parent().parent().find('li .inner').slideUp(350);
+
+        $active.next().toggleClass('show');
+        $active.next().slideToggle(350);
       
     }
 
@@ -30,36 +29,3 @@ $(document).ready(function(){
   
   
   });
-
-
-
-/* Version two- Vanilla Javascript */
-
-
-// var acc = document.getElementsByClassName("accordion");
-// var i;
-
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     var content = this.nextElementSibling;
-//     if(content.style.maxHeight){
-//       content.style.maxHeight = null;
-//     } else {
-//      content.style.maxHeight = content.scrollHeight + "px";
-//     } 
-//   });
-// }
-
-/* Version 3 */
-
-// $(function() {
-//     var coll = document.getElementsByClassName("accordion");
-  
-//     //setting buttons of class 'accordion' to extend on click
-//     for (i = 0; i < coll.length; i++) {
-//       coll[i].addEventListener("click", function () {
-//         this.classList.toggle("active");
-//       });
-//     }
-//   });
