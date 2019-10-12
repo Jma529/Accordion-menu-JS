@@ -1,0 +1,80 @@
+a.toggle {
+  text-decoration: none;
+  color: black;
+text-align: center;
+font-weight: bold;
+
+}
+
+.description {
+  margin: 1em auto 2.25em;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul .inner {
+  overflow: hidden;
+  display: none;
+}
+ul .inner.show {
+  /*display: block;*/
+margin: 0;
+}
+.outer:hover {
+background-color: gray;
+}
+
+ul li a.toggle {
+  width: 100%;
+  display: block;
+  color: black;
+  padding: 1em 0;
+  border-radius: 0.15em;
+border: .5px solid black;
+ box-shadow: 2px 2px;
+font-size: 1.5em;
+
+}
+
+ul.inner li .toggle {
+padding: 20px;
+box-shadow: none;
+font-weight: normal;
+}
+
+ul.inner li .toggle:focus {
+background-color: black;
+color: white;
+
+}
+
+.inner p {
+  padding: 16px;
+font-size: 1.25em;
+border: .05px solid black;
+margin:0;
+text-align: center;
+}
+
+a.mail-link {
+text-decoration: underline;
+padding:0;
+}
+  /* + sign */
+
+  a.topic:after {
+    content: '\2795'; 
+    font-size: 14px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+
+/* - sign */
+
+  a.topic.active:after {
+    content: "\2796"; 
+}
