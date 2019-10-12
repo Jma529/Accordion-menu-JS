@@ -11,13 +11,13 @@ $(document).ready(function(){
  $('.toggle').click(function(e) {
      e.preventDefault();
 
-   var $active = $(active);
+   var $active = $(this);
 
     if ($active.next().hasClass('show')) {
         $active.next().removeClass('show');
         $active.next().slideUp(350);
     } else {
-       $active.parent().active().find('li .inner').removeClass('show');
+       $active.parent().parent().find('li .inner').removeClass('show');
        $active.parent().parent().find('li .inner').slideUp(350);
 
         $active.next().toggleClass('show');
